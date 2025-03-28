@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 100" width="300" height="100">
+  <!-- Fondo del logo -->
+  <rect width="300" height="100" fill="#ffffff" rx="10" ry="10"/>
+  
+  <!-- Logo Oracle -->
+  <rect x="20" y="30" width="120" height="40" rx="5" ry="5" fill="#f44336"/>
+  <text x="35" y="58" font-family="Arial" font-size="24" font-weight="bold" fill="#ffffff">ORACLE</text>
+  
+  <!-- Texto Partner -->
+  <text x="150" y="58" font-family="Arial" font-size="24" font-weight="bold" fill="#0170B9">PARTNER</text>
+  
+  <!-- Estrella de certificación -->
+  <polygon points="270,30 275,45 290,45 280,55 285,70 270,60 255,70 260,55 250,45 265,45" fill="#FFD700" stroke="#0170B9" stroke-width="1"/>
+</svg> 

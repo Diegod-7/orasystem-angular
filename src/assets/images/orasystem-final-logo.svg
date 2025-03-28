@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="64" viewBox="0 0 240 64">
+  <!-- Fondo del logo (transparente) -->
+  <rect width="240" height="64" fill="transparent"/>
+  
+  <!-- Texto "ORA" -->
+  <text x="10" y="42" font-family="Arial" font-size="32" font-weight="bold" fill="#0170B9">ORA</text>
+  
+  <!-- Texto "SYSTEM" -->
+  <text x="80" y="42" font-family="Arial" font-size="32" font-weight="bold" fill="#333333">SYSTEM</text>
+  
+  <!-- Línea decorativa -->
+  <line x1="10" y1="48" x2="230" y2="48" stroke="#0170B9" stroke-width="2"/>
+  
+  <!-- Texto "Consulting & Administration IT" -->
+  <text x="10" y="60" font-family="Arial" font-size="12" fill="#666666">Consulting & Administration IT</text>
+</svg> 

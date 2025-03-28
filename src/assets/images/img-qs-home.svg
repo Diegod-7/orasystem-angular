@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="400" viewBox="0 0 600 400">
+  <!-- Fondo -->
+  <rect width="600" height="400" fill="#f8f9fa"/>
+  
+  <!-- Elementos decorativos -->
+  <rect x="50" y="50" width="500" height="300" rx="10" ry="10" fill="#ffffff" stroke="#0170B9" stroke-width="2"/>
+  
+  <!-- Logo Oracle -->
+  <rect x="200" y="100" width="200" height="60" rx="5" ry="5" fill="#f44336"/>
+  <text x="230" y="142" font-family="Arial" font-size="32" font-weight="bold" fill="#ffffff">ORACLE</text>
+  
+  <!-- Texto "Partner" -->
+  <text x="250" y="200" font-family="Arial" font-size="24" font-weight="bold" fill="#0170B9">PARTNER</text>
+  
+  <!-- Certificación -->
+  <circle cx="300" cy="250" r="50" fill="#ffffff" stroke="#0170B9" stroke-width="2"/>
+  <text x="270" y="260" font-family="Arial" font-size="20" font-weight="bold" fill="#0170B9">CERT</text>
+  
+  <!-- Estrellas de certificación -->
+  <polygon points="200,300 210,320 230,320 215,335 220,355 200,340 180,355 185,335 170,320 190,320" fill="#FFD700" stroke="#0170B9" stroke-width="1"/>
+  <polygon points="400,300 410,320 430,320 415,335 420,355 400,340 380,355 385,335 370,320 390,320" fill="#FFD700" stroke="#0170B9" stroke-width="1"/>
+</svg> 

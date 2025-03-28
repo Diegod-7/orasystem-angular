@@ -1,0 +1,92 @@
+<div class="forum-container">
+  <div class="forum-header">
+    <h2>Foro de Comunidad Orasystem</h2>
+    <p class="forum-description">Un espacio para compartir conocimientos, resolver dudas y conectar con otros profesionales.</p>
+    <button class="new-topic-btn" (click)="toggleNewTopicForm()">
+      <i class="fas fa-plus-circle"></i> Nuevo Tema
+    </button>
+  </div>
+
+  <!-- Formulario para nuevo tema -->
+  <div class="new-topic-form" *ngIf="showNewTopicForm">
+    <h3>Crear Nuevo Tema</h3>
+    <div class="form-group">
+      <label for="topic-title">Título:</label>
+      <input type="text" id="topic-title" [(ngModel)]="newTopic.title" placeholder="Título del tema">
+    </div>
+    <div class="form-group">
+      <label for="topic-author">Nombre:</label>
+      <input type="text" id="topic-author" [(ngModel)]="newTopic.author" placeholder="Tu nombre">
+    </div>
+    <div class="form-group">
+      <label for="topic-content">Contenido:</label>
+      <textarea id="topic-content" [(ngModel)]="newTopic.content" placeholder="Describe tu tema o pregunta" rows="4"></textarea>
+    </div>
+    <div class="form-actions">
+      <button class="cancel-btn" (click)="toggleNewTopicForm()">Cancelar</button>
+      <button class="submit-btn" (click)="addTopic()">Publicar Tema</button>
+    </div>
+  </div>
+
+  <!-- Lista de temas -->
+  <div class="topics-list" *ngIf="!selectedTopic">
+    <div class="topic-card" *ngFor="let topic of topics" (click)="selectTopic(topic)">
+      <div class="topic-header">
+        <h3>{{ topic.title }}</h3>
+        <span class="topic-meta">
+          <span class="author">{{ topic.author }}</span> |
+          <span class="date">{{ topic.date | date:'dd/MM/yyyy' }}</span>
+        </span>
+      </div>
+      <p class="topic-preview">{{ topic.content | slice:0:150 }}{{ topic.content.length > 150 ? '...' : '' }}</p>
+      <div class="topic-stats">
+        <span class="comments-count">
+          <i class="fas fa-comments"></i> {{ topic.comments.length }} comentarios
+        </span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Detalle del tema seleccionado -->
+  <div class="topic-detail" *ngIf="selectedTopic">
+    <button class="back-btn" (click)="backToTopicList()">
+      <i class="fas fa-arrow-left"></i> Volver a temas
+    </button>
+    
+    <div class="topic-content">
+      <h2>{{ selectedTopic.title }}</h2>
+      <div class="topic-meta">
+        <span class="author">{{ selectedTopic.author }}</span> |
+        <span class="date">{{ selectedTopic.date | date:'dd/MM/yyyy' }}</span>
+      </div>
+      <p>{{ selectedTopic.content }}</p>
+    </div>
+    
+    <!-- Comentarios -->
+    <div class="comments-section">
+      <h3>Comentarios ({{ selectedTopic.comments.length }})</h3>
+      
+      <div class="comment" *ngFor="let comment of selectedTopic.comments">
+        <div class="comment-header">
+          <span class="comment-author">{{ comment.author }}</span>
+          <span class="comment-date">{{ comment.date | date:'dd/MM/yyyy HH:mm' }}</span>
+        </div>
+        <p class="comment-content">{{ comment.content }}</p>
+      </div>
+      
+      <!-- Formulario para nuevo comentario -->
+      <div class="new-comment-form">
+        <h4>Añadir comentario</h4>
+        <div class="form-group">
+          <label for="comment-author">Nombre:</label>
+          <input type="text" id="comment-author" [(ngModel)]="newComment.author" placeholder="Tu nombre">
+        </div>
+        <div class="form-group">
+          <label for="comment-content">Comentario:</label>
+          <textarea id="comment-content" [(ngModel)]="newComment.content" placeholder="Escribe tu comentario" rows="3"></textarea>
+        </div>
+        <button class="submit-btn" (click)="addComment()">Publicar Comentario</button>
+      </div>
+    </div>
+  </div>
+</div> 

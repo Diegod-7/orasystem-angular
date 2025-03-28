@@ -1,0 +1,21 @@
+<section class="services-section">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>Nuestros Servicios</h2>
+      <p>Soluciones integrales para optimizar su infraestructura tecnológica</p>
+    </div>
+    
+    <div class="row">
+      <div class="col-md-3 col-6" *ngFor="let service of services">
+        <div class="service-card">
+          <div class="service-icon">
+            <span class="{{service.icon}}"></span>
+          </div>
+          <h3>{{service.title}}</h3>
+          <p>{{service.description}}</p>
+          <a href="#" class="service-link">Más información</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

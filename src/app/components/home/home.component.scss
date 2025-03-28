@@ -1,0 +1,643 @@
+// Estilos para el banner principal
+.main-banner {
+  background-color: #f5f5f5;
+  padding: 30px 0;
+  
+  .banner-title {
+    font-size: 28px;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+  }
+  
+  .banner-logo {
+    text-align: right;
+    
+    img {
+      max-width: 274px;
+    }
+  }
+}
+
+// Estilos para la sección de servicios
+.services-section {
+  padding: 50px 0;
+  background-color: #fff;
+  
+  .service-card {
+    background-color: #fff;
+    padding: 30px;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+    
+    .service-icon {
+      font-size: 40px;
+      color: #0170B9;
+      margin-bottom: 20px;
+    }
+    
+    .service-title {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    
+    .service-description {
+      color: #666;
+      margin-bottom: 20px;
+    }
+    
+    .service-link {
+      color: #0170B9;
+      text-decoration: none;
+      font-weight: 500;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+  
+  .service-image-card {
+    margin-bottom: 30px;
+    
+    .service-image {
+      height: 250px;
+      background-size: cover;
+      background-position: center;
+      border-radius: 5px;
+      position: relative;
+      overflow: hidden;
+      
+      .service-image-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        transition: all 0.3s ease;
+      }
+      
+      .service-image-content {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        color: #fff;
+        z-index: 1;
+        
+        .service-image-icon {
+          font-size: 30px;
+          margin-bottom: 10px;
+        }
+        
+        .service-image-title {
+          font-size: 20px;
+          font-weight: 600;
+          margin-bottom: 10px;
+        }
+        
+        .service-image-link {
+          font-size: 14px;
+          font-weight: 500;
+        }
+      }
+      
+      &:hover {
+        .service-image-overlay {
+          background-color: rgba(0, 0, 0, 0.7);
+        }
+      }
+    }
+  }
+}
+
+// Estilos para la sección de infraestructura IT
+.it-infrastructure {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('/assets/images/bg-pattern.svg');
+  
+  .section-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .section-description {
+    color: #666;
+    margin-bottom: 40px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  .feature-box {
+    text-align: center;
+    margin-bottom: 30px;
+    
+    .feature-icon {
+      font-size: 40px;
+      color: #0170B9;
+      margin-bottom: 20px;
+    }
+    
+    .feature-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: #333;
+    }
+  }
+}
+
+// Estilos para la sección de soporte
+.support-section {
+  padding: 50px 0;
+  
+  .support-card {
+    background-color: #f5f5f5;
+    padding: 30px;
+    border-radius: 5px;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.1);
+      opacity: 0;
+      transition: all 0.3s ease;
+    }
+    
+    &:hover::before {
+      opacity: 1;
+    }
+    
+    .support-title {
+      font-size: 20px;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    
+    .support-description {
+      color: #666;
+      margin-bottom: 20px;
+    }
+    
+    .support-link {
+      display: inline-block;
+      padding: 8px 15px;
+      background-color: #0170B9;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 4px;
+      font-size: 14px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+      
+      &:hover {
+        background-color: darken(#0170B9, 10%);
+        transform: translateX(5px);
+      }
+    }
+  }
+}
+
+// Estilos para la sección de Oracle Partners
+.partners-section {
+  padding: 70px 0;
+  background-color: #f9f9f9;
+  
+  .partners-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .partners-description {
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .partners-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px 0;
+    
+    li {
+      margin-bottom: 10px;
+      color: #666;
+      
+      i {
+        color: #0170B9;
+        margin-right: 10px;
+      }
+    }
+  }
+  
+  .btn-primary {
+    background-color: #0170B9;
+    border-color: #0170B9;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background-color: darken(#0170B9, 10%);
+      border-color: darken(#0170B9, 10%);
+      transform: translateY(-3px);
+    }
+  }
+}
+
+// Estilos para la sección de planes de base de datos
+.database-plans {
+  padding: 50px 0;
+  
+  .section-title {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .section-description {
+    color: #666;
+    margin-bottom: 30px;
+  }
+}
+
+// Estilos para la sección de calidad
+.quality-section {
+  padding: 30px 0;
+  background-color: #0170B9;
+  color: #fff;
+  
+  .quality-title {
+    font-size: 24px;
+    font-weight: 600;
+    margin: 0;
+  }
+  
+  .btn-primary {
+    background-color: #fff;
+    border-color: #fff;
+    color: #0170B9;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+      border-color: rgba(255, 255, 255, 0.9);
+      transform: translateY(-3px);
+    }
+  }
+}
+
+// Hero Section
+.hero-section {
+  padding: 100px 0;
+  background-color: #f8f9fa;
+  
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .hero-buttons {
+    display: flex;
+    gap: 15px;
+    
+    .btn-outline {
+      color: #0170B9;
+      background-color: transparent;
+      border: 2px solid #0170B9;
+      
+      &:hover {
+        background-color: rgba(1, 112, 185, 0.1);
+      }
+    }
+  }
+}
+
+// Features Section
+.features-section {
+  padding: 80px 0;
+  background-color: #fff;
+  
+  .feature-card {
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+    height: 100%;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+    }
+    
+    .feature-icon {
+      margin-bottom: 20px;
+      
+      i {
+        font-size: 2.5rem;
+        color: #0170B9;
+      }
+    }
+    
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 15px;
+      color: #333;
+    }
+    
+    p {
+      font-size: 1rem;
+      color: #666;
+    }
+  }
+}
+
+// Call to Action
+.cta-section {
+  padding: 60px 0;
+  background-color: #0170B9;
+  color: #fff;
+  
+  h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+  }
+  
+  .btn-primary {
+    background-color: #fff;
+    color: #0170B9;
+    border-color: #fff;
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+  }
+}
+
+// Main Banner
+.main-banner {
+  padding: 50px 0;
+  background-color: #f8f9fa;
+  
+  .banner-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+  }
+  
+  .banner-logo {
+    text-align: right;
+    
+    img {
+      max-height: 80px;
+    }
+  }
+}
+
+// IT Infrastructure
+.it-infrastructure {
+  padding: 80px 0;
+  background-color: #fff;
+  
+  .section-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .section-description {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 40px;
+  }
+  
+  .feature-box {
+    text-align: center;
+    padding: 30px 20px;
+    margin-bottom: 30px;
+    
+    .feature-icon {
+      margin-bottom: 20px;
+      
+      i {
+        font-size: 2.5rem;
+        color: #0170B9;
+      }
+    }
+    
+    .feature-title {
+      font-size: 1.2rem;
+      font-weight: 600;
+      color: #333;
+    }
+  }
+}
+
+// Support Section
+.support-section {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+  
+  .support-card {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    height: 100%;
+    
+    .support-title {
+      font-size: 1.5rem;
+      font-weight: 600;
+      color: #333;
+      margin-bottom: 15px;
+    }
+    
+    .support-description {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 20px;
+    }
+    
+    .support-link {
+      color: #0170B9;
+      font-weight: 600;
+      text-decoration: none;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// Partners Section
+.partners-section {
+  padding: 80px 0;
+  background-color: #fff;
+  
+  .partners-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  .partners-description {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 15px;
+  }
+  
+  .partners-features {
+    list-style: none;
+    padding: 0;
+    margin: 25px 0;
+    
+    li {
+      margin-bottom: 10px;
+      font-size: 1rem;
+      color: #666;
+      
+      i {
+        color: #0170B9;
+        margin-right: 10px;
+      }
+    }
+  }
+}
+
+// Database Plans
+.database-plans {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+  
+  .section-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .section-description {
+    font-size: 1.1rem;
+    color: #666;
+  }
+}
+
+// Quality Section
+.quality-section {
+  padding: 60px 0;
+  background-color: #0170B9;
+  color: #fff;
+  
+  .quality-title {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  
+  .btn-primary {
+    background-color: #fff;
+    color: #0170B9;
+    border-color: #fff;
+    
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.9);
+    }
+  }
+}
+
+// Responsive Styles
+@media (max-width: 767px) {
+  .hero-section {
+    padding: 60px 0;
+    
+    h1 {
+      font-size: 2.2rem;
+    }
+    
+    p {
+      font-size: 1.1rem;
+    }
+  }
+  
+  .features-section,
+  .it-infrastructure,
+  .partners-section {
+    padding: 60px 0;
+  }
+  
+  .main-banner {
+    .banner-title {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+    
+    .banner-logo {
+      text-align: center;
+    }
+  }
+  
+  .partners-section {
+    .partners-title {
+      font-size: 1.8rem;
+    }
+  }
+  
+  .quality-section {
+    .quality-title {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+    }
+    
+    .text-right {
+      text-align: center !important;
+    }
+  }
+} 
