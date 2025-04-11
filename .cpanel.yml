@@ -1,0 +1,20 @@
+---
+deployment:
+  tasks:
+    # Instalar dependencias y construir la aplicación
+    - npm install
+    - npm run build -- --configuration=production
+    
+    # Configurar el directorio de despliegue
+    - export DEPLOYPATH=/home/example/public_html/
+    
+    # Copiar los archivos construidos
+    - /bin/cp -R dist/* $DEPLOYPATH
+    
+    # Crear archivo .htaccess para manejar rutas de Angular
+    - echo "RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.html$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.html [L]" > $DEPLOYPATH/.htaccess 
