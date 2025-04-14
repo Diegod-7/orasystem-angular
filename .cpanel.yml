@@ -3,13 +3,13 @@ deployment:
   tasks:
     # Instalar dependencias y construir la aplicación
     - npm install
-    - npm run build -- --configuration=production
+    - ng build --configuration=production
     
     # Configurar el directorio de despliegue
     - export DEPLOYPATH=/home/example/public_html/
     
     # Copiar los archivos construidos
-    - /bin/cp -R dist/* $DEPLOYPATH
+    - /bin/cp -R dist/orasystem-angular/* $DEPLOYPATH
     
     # Crear archivo .htaccess para manejar rutas de Angular
     - echo "RewriteEngine On
